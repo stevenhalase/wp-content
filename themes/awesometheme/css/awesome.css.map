@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;IACK;EACH,MAAM,EAAE,CAAC;EACT,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,IAAI;EAChB,IAAI,EAAE,UAAU;;AAGlB,IAAK;EACH,OAAO,EAAE,IAAI",
+"sources": ["awesome.scss"],
+"names": [],
+"file": "awesome.css"
+}
