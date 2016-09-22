@@ -1,10 +1,19 @@
+$primaryColor : #0000CC;
+$secondaryColor : #FCCA35;
+$backgroundPrimary : #000;
+$backgroundSecondary : #333;
+$primaryFontSize : 12px;
+$primaryFontFamily : 'Roboto', sans-serif;
+
 /* GLOBAL */
+html {
+  background-color: $backgroundSecondary;
+}
+
 .controller-container {
     width: 100vw;
-    height: 100vh;
-    background-image: url('../images/bg.jpeg');
-    background-position: center;
-    background-size: cover;
+    font-family: $primaryFontFamily;
+    background-color: $backgroundSecondary;
 }
 
 /* SIDE-NAV */
@@ -13,8 +22,7 @@
   position: fixed;
   height: 100vh;
   width: 45px;
-  background-color: #ecf0f1;
-  border-right: 1px solid #dcdcdc;
+  background-color: $backgroundPrimary;
   -webkit-transition: width .5s ease-in-out;
   -moz-transition: width .5s ease-in-out;
   -o-transition: width .5s ease-in-out;
@@ -22,7 +30,7 @@
 }
 
 .nav-open {
-  width: 80vw;
+  width: 150px;
   -webkit-transition: width .5s ease-in-out;
   -moz-transition: width .5s ease-in-out;
   -o-transition: width .5s ease-in-out;
@@ -48,14 +56,14 @@
 
 .icon-bar {
   z-index: 6;
-  background-color: #34495e;
+  background-color: white;
 }
 
 .nav-list {
   position: absolute;
   top: 50px;
   width: 0;
-  text-align: center;
+  text-align: right;
   -webkit-transition: width .6s ease-in-out;
   -moz-transition: width .6s ease-in-out;
   -o-transition: width .6s ease-in-out;
@@ -72,10 +80,11 @@
 }
 
 .nav-item {
+  color: white;
   height: 50px;
   cursor: pointer;
-  border-top: 1px solid #CCC;
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid $backgroundPrimary;
+  border-bottom: 1px solid $backgroundPrimary;
 }
 
 .nav-item:first-of-type {
@@ -88,27 +97,62 @@
 
 .nav-item p {
   line-height: 50px;
-  font-size: 18px;
+  margin-right: 10px;
+  font-size: $primaryFontSize;
 }
 
 .nav-item--active {
-  background-color: #34495e;
+  background-color: $backgroundSecondary;
   color: white;
+  font-weight: 700;
 }
 
 /* CONTENT */
 .content-container {
+
+  background-image: url('../images/bg-filter.png');
+  background-position: center;
+  background-size: cover;
+  margin-left: 45px;
+}
+
+.footer-container {
     margin-left: 45px;
+    background-color: $backgroundSecondary;
+
+}
+
+.header-title {
+  font-size: 50px;
+  // font-weight: 700;
 }
 
 .post-container {
     display: none;
+    background-color: rgba(255,255,255,0.3);
+    margin-bottom: 25px;
+}
+
+.post-title {
+  text-align: center;
+}
+
+.post-body {
+  font-weight: 300;
+  padding: 50px;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
 }
 
 .display-post {
     display: block;
 }
 
+.fb-like {
+  text-align: center;
+  width: 100%;
+  margin: 25px;
+}
 
 
 @media (min-width: 768px) {
